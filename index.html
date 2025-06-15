@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Happy 19th Birthday, Rand! 🎉</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Book of Rand</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom right, #1e0731, #49114d);
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3em;
+      margin-top: 1em;
+    }
+    .flipbook {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 2em;
+    }
+    .flipbook img {
+      width: 300px;
+      height: auto;
+      border: 4px solid #fff;
+      border-radius: 16px;
+      box-shadow: 0 0 12px #00000088;
+      transition: transform 0.3s;
+    }
+    .flipbook img:hover {
+      transform: scale(1.05);
+    }
+    audio {
+      margin-top: 20px;
+    }
+    p {
+      max-width: 600px;
+      margin: auto;
+      padding: 1em;
+      font-size: 1.2em;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🎂 Happy 19th Birthday, Rand!</h1>
-    <h2>With love from Mariam 💖</h2>
-    <div class="animation" id="animation"></div>
-    <button id="music-btn">Play Birthday Tune 🎶</button>
-    <p class="message">
-      In code we trust — and in you, I trust most.<br>
-      Here’s to debugging life together, 
-      compiling memories, and infinite loops of laughter.
-    </p>
+  <h1>The Book of Rand</h1>
+  <p>Happy 20th Birthday Rand 🎉 — this magical digital book was made by Mariam, just for you. You're gonna live forever in me, and in every pixel of this page.</p>
+  <div class="flipbook">
+    <img src="rand1.jpg" alt="Rand 1">
+    <img src="rand2.jpg" alt="Rand 2">
+    <img src="rand3.jpg" alt="Rand 3">
   </div>
-  <audio id="bg-music" loop src="music.mp3"></audio>
-  <script src="script.js"></script>
+  <audio controls autoplay loop>
+    <source src="https://audioplayer.wixmp.com/mp3/3ed899cc-9996-4eea-a6d8-8b3d66d4323e.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
 </body>
 </html>
