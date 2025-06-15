@@ -1,0 +1,49 @@
+import { useEffect } from "react";
+
+export default function Home() {
+  useEffect(() => {
+    const audio = new Audio("/music.mp3");
+    audio.play().catch((e) => console.log("Autoplay blocked:", e));
+    audio.loop = true;
+    audio.volume = 0.6;
+    return () => audio.pause();
+  }, []);
+
+  return (
+    <div style={{
+      background: 'linear-gradient(to right, #1e0731, #49114d)',
+      minHeight: '100vh',
+      fontFamily: 'Courier New, monospace',
+      color: 'white',
+      textAlign: 'center',
+      padding: '2rem'
+    }}>
+      <h1 style={{ fontSize: '3em', marginBottom: '1rem' }}>The Book of Rand 📖</h1>
+      <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.2em' }}>
+        Happy 20th Birthday Rand 🎉 — this magical book was made by Mariam, just for you.
+        You’re gonna live forever in me.
+      </p>
+
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexWrap: 'wrap',
+        marginTop: '2rem',
+        gap: '20px'
+      }}>
+        <img src="/rand1.jpg" alt="Rand 1" style={imgStyle} />
+        <img src="/rand2.jpg" alt="Rand 2" style={imgStyle} />
+        <img src="/rand3.jpg" alt="Rand 3" style={imgStyle} />
+      </div>
+    </div>
+  );
+}
+
+const imgStyle = {
+  width: '250px',
+  height: 'auto',
+  borderRadius: '16px',
+  boxShadow: '0 0 12px #00000088',
+  transform: 'rotate(-1deg)',
+  transition: 'transform 0.3s',
+};
